@@ -52,7 +52,7 @@ npm run dev
 
 Open your browser and visit `http://localhost:3000`.
 
-## Project Structure
+## Project Structure...
 
 - **`index.tsx`**: The entry point of the application.
 - **`App.tsx`**: Main router and layout logic.
