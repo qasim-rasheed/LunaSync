@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LunaSync - Cycle Syncing Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              pastel: {
+                pink: "#FAD0C4",
+                lavender: "#E0BBE4",
+                mint: "#D9E4DD",
+                peach: "#FFDAC1",
+                blue: "#B5EAD7",
+                dark: "#2D2D2D",
+                card: "rgba(255, 255, 255, 0.7)",
+                cardDark: "rgba(30, 30, 30, 0.7)",
+              },
+            },
+            fontFamily: {
+              sans: ["Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom scrollbar for Webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e0bbe4;
+        border-radius: 4px;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+      .dark .glass {
+        background: rgba(30, 30, 30, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-rose-50 via-white to-violet-50 dark:from-gray-900 dark:via-gray-800 dark:to-slate-900 text-gray-800 dark:text-gray-100 min-h-screen transition-colors duration-300"
+  >
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
