@@ -35,7 +35,8 @@ export const generateDailyAdvice = async (
       Look ahead at the next 3-5 days. Identify a key moment (e.g., entering a new phase, a high-energy day, or a need for rest).
       Create a "Wellness Calendar Event" suggestion for that day.
       - Title: Short, catchy, action-oriented (e.g., "Sunset Yoga & Journaling", "Big Project Focus Block", "Slow Down & Meditate").
-      - Description: A short persuasive paragraph (2-3 sentences) on WHY this specific action will benefit her on that specific future day.
+      - Description: Write a short persuasive paragraph (2-3 sentences) on WHY this specific action is beneficial right now.
+      - TONE RULE: **CRITICAL**: Write this in the **PRESENT TENSE**, as if the user is reading it ON THE DAY of the event. Do NOT use future phrasing like "In a few days...". Instead, use immediate, actionable language like "Take a deep breath..." or "Today, your energy is perfect for...".
       - Days Offset: How many days from today this event should be scheduled (e.g. 2, 3, 4, or 5).
 
       Output JSON only.
