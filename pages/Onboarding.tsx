@@ -300,7 +300,7 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
             <div className="space-y-6 animate-fade-in">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Body Intelligence</h2>
-                <p className="text-gray-500 dark:text-gray-400">Do you frequently experience any of these?</p>
+                <p className="text-gray-500 dark:text-gray-400">Tell Luna what are you more common symptoms before and during your period</p>
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -327,7 +327,7 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
             <div className="space-y-6 animate-fade-in h-full flex flex-col">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">What's your focus?</h2>
-                <p className="text-gray-500 dark:text-gray-400">Tell Luna what matters most right now.</p>
+                <p className="text-gray-500 dark:text-gray-400">What are your current goals?</p>
               </div>
               <textarea
                 value={specificGoals}
