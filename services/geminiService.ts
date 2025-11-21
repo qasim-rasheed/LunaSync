@@ -28,6 +28,9 @@ export const generateDailyAdvice = async (
       Generate a highly personalized daily plan for today.
       The tone should be supportive, expert, encouraging, and practical.
       
+      CRITICAL: Generate personalized LISTS of small, actionable items (3-5 items per category) that the user can add to their calendar. 
+      These items must be short (2-6 words max) and directly relevant to their profile (e.g., if they like Yoga, suggest specific poses; if they are Vegan, suggest vegan snacks).
+
       ADDITIONALLY:
       Look ahead at the next 3-5 days. Identify a key moment (e.g., entering a new phase, a high-energy day, or a need for rest).
       Create a "Wellness Calendar Event" suggestion for that day.
@@ -35,12 +38,6 @@ export const generateDailyAdvice = async (
       - Description: A short persuasive paragraph (2-3 sentences) on WHY this specific action will benefit her on that specific future day.
       - Days Offset: How many days from today this event should be scheduled (e.g. 2, 3, 4, or 5).
 
-      CRITICAL GUIDELINES:
-      1. Use the User's SPECIFIC interests.
-      2. Respect their DIET.
-      3. Respect their SCHEDULE.
-      4. Address SYMPTOMS.
-      
       Output JSON only.
     `;
 
@@ -54,11 +51,42 @@ export const generateDailyAdvice = async (
           type: Type.OBJECT,
           properties: {
             summary: { type: Type.STRING, description: "A 1-sentence greeting and summary of today's vibe." },
+            moodForecast: { type: Type.STRING, description: "Emotional landscape to expect." },
+            
+            // Main Tips
             workoutRecommendation: { type: Type.STRING, description: "Specific workout advice based on energy levels." },
             nutritionTip: { type: Type.STRING, description: "Foods to eat to support hormones in this phase." },
             productivityHack: { type: Type.STRING, description: "How to work smart today based on brain chemistry." },
             selfCareAction: { type: Type.STRING, description: "A small act of kindness for oneself." },
-            moodForecast: { type: Type.STRING, description: "Emotional landscape to expect." },
+            
+            // NEW: Personalized Recommendations Lists
+            recommendations: {
+              type: Type.OBJECT,
+              properties: {
+                work: { 
+                  type: Type.ARRAY, 
+                  items: { type: Type.STRING },
+                  description: "3-5 short work/study tasks tailored to user's job and phase."
+                },
+                movement: { 
+                  type: Type.ARRAY, 
+                  items: { type: Type.STRING },
+                  description: "3-5 short exercises tailored to user's interests and phase."
+                },
+                nutrition: { 
+                  type: Type.ARRAY, 
+                  items: { type: Type.STRING },
+                  description: "3-5 short food items/meals tailored to user's diet and phase."
+                },
+                selfcare: { 
+                  type: Type.ARRAY, 
+                  items: { type: Type.STRING },
+                  description: "3-5 short self-care acts tailored to user's goals and phase."
+                }
+              },
+              required: ["work", "movement", "nutrition", "selfcare"]
+            },
+
             upcomingEvent: {
               type: Type.OBJECT,
               properties: {
@@ -69,7 +97,7 @@ export const generateDailyAdvice = async (
               required: ["title", "description", "daysOffset"]
             }
           },
-          required: ["summary", "workoutRecommendation", "nutritionTip", "productivityHack", "selfCareAction", "moodForecast", "upcomingEvent"]
+          required: ["summary", "workoutRecommendation", "nutritionTip", "productivityHack", "selfCareAction", "moodForecast", "recommendations", "upcomingEvent"]
         }
       }
     });

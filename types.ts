@@ -17,15 +17,27 @@ export interface UserProfile {
   cycleLength: number;
 }
 
+// Updated to include lists of personalized recommendations
 export interface DayPlan {
   date: string;
   phase: CyclePhase;
   summary: string;
+  moodForecast: string;
+  
+  // Detailed single tip (existing)
   workoutRecommendation: string;
   nutritionTip: string;
   productivityHack: string;
   selfCareAction: string;
-  moodForecast: string;
+
+  // NEW: Personalized Lists for Planning
+  recommendations: {
+    work: string[];
+    movement: string[];
+    nutrition: string[];
+    selfcare: string[];
+  };
+
   upcomingEvent: {
     title: string;
     description: string;
@@ -37,4 +49,17 @@ export interface InterestOption {
   category: string;
   items: string[];
   icon: string;
+}
+
+export interface PlanItem {
+  id: string;
+  text: string;
+  category: 'work' | 'movement' | 'nutrition' | 'selfcare';
+  phase: CyclePhase;
+}
+
+export interface CalendarEvent {
+  id: string;
+  date: Date;
+  items: PlanItem[];
 }
