@@ -1,11 +1,11 @@
-# LunaSync - Cycle Syncing Planner
+ # LunaSync - Cycle Syncing Planner
 
 LunaSync is a holistic cycle-syncing lifestyle planner that uses AI to tailor your goals, workouts, and productivity to your natural biological rhythm.
 
 ## Features
 
 - **Cycle Tracking**: Tracks Menstrual, Follicular, Ovulatory, and Luteal phases.
-- **AI-Powered Planning**: Generates tailored, bite-sized action lists for Work, Movement, Nutrition, and Self-Care based on your specific interests and diet.
+- **AI-Powered Planning**: Generates tailored, bite-sized action lists for tasks, Movement, Nutrition, and Self-Care based on your specific interests and diet.
 - **Interactive Dashboard**: Build your "Phase Plan" by selecting AI suggestions and organizing them on a drag-and-drop calendar.
 - **Smart Calendar Sync**: Bulk export your entire phase plan to Google Calendar (.ics) or add specific "Save the Date" reminders for upcoming phases.
 - **Lifestyle Integration**: Custom onboarding for diet, sleep chronotype, and interests.
