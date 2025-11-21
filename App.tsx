@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { LandingPage } from './pages/LandingPage';
 import { Onboarding } from './pages/Onboarding';
 import { Dashboard } from './pages/Dashboard';
+import { HowItWorks } from './pages/HowItWorks';
 import { Header } from './components/Header';
 import { UserProfile } from './types';
 
@@ -42,6 +43,8 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
+        {/* Only show header on Dashboard/Onboarding, or optionally everywhere. 
+            Currently keeping it everywhere for consistency. */}
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         
         <main className="flex-grow w-full">
@@ -52,6 +55,7 @@ const App: React.FC = () => {
                 user ? <Navigate to="/dashboard" /> : <LandingPage onStart={() => window.location.hash = '#/onboarding'} />
               } 
             />
+            <Route path="/how-it-works" element={<HowItWorks />} />
             <Route 
               path="/onboarding" 
               element={
