@@ -26,15 +26,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
           {/* Left: Copy */}
           <div className="space-y-8 animate-fade-in-up text-center lg:text-left">
             
-            {/* UPDATED BADGE: Cleaner, modern, non-AI vibe */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-pink-200 dark:border-pink-800 bg-pink-50/50 dark:bg-pink-900/20 backdrop-blur-sm text-pink-800 dark:text-pink-200 text-xs font-medium mx-auto lg:mx-0">
-              <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span>
-              </span>
-              Cycle Syncing Reimagined
-            </div>
-
+          
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-[1.1]">
               Harmonize your life with your <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-violet-500">biology.</span>
             </h1>
@@ -65,7 +57,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart }) => {
                    </div>
                  ))}
               </div>
-              <p>Be the first to experience LunaSync. <span className="text-pink-600 dark:text-pink-400 font-semibold">Early access opening soon.</span></p>
+              <p>Be the first to experience LunaSync. <span className="text-pink-600 dark:text-pink-400 font-semibold">Early access.</span></p>
             </div>
           </div>
 

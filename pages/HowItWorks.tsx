@@ -67,9 +67,6 @@ export const HowItWorks: React.FC = () => {
         
         {/* HERO */}
         <div className="text-center space-y-6 animate-fade-in-up">
-           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300 text-sm font-bold uppercase tracking-wider">
-             <Brain size={14} /> The Science
-           </div>
            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white">
              We decode your <br/>
              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">Infradian Rhythm.</span>
