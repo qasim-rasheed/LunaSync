@@ -344,7 +344,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ user }) => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
         <div>
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Good Morning, {user.name}
+            Hello {user.name}
           </h1>
           <p className="text-gray-500 dark:text-gray-400">Here is your cycle-synced forecast for today.</p>
         </div>
