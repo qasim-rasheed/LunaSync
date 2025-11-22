@@ -2,6 +2,8 @@
 
 LunaSync is a holistic cycle-syncing lifestyle planner that uses AI to tailor your goals, workouts, and productivity to your natural biological rhythm.
 
+Check out the **live application** here: [https://luna-sync-nu.vercel.app/](https://luna-sync-nu.vercel.app/)
+
 ## Features
 
 - **Cycle Tracking**: Tracks Menstrual, Follicular, Ovulatory, and Luteal phases.
